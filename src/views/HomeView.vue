@@ -1,18 +1,26 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js + TypeScript App"/>
+    <FilterPosts/>
+    <SortPostsForm/>
+    <NewsFeed/>
   </div>
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue';
-import HelloWorld from '@/components/HelloWorld.vue'; // @ is an alias to /src
+import NewsFeed from '@/components/Newsfeed.vue'; 
+import FilterPosts from '@/components/FilterPosts.vue'; 
+import SortPostsForm from '@/components/SortPostsForm.vue'; 
+import { useStore } from '@/store';
+import { ActionTypes } from '@/store/modules/posts/actions';
+import { computed, defineComponent, onMounted } from 'vue'
 
 export default defineComponent({
   name: 'HomeView',
   components: {
-    HelloWorld,
-  },
+    NewsFeed,
+    FilterPosts,
+    SortPostsForm
+  }
 });
 </script>
+

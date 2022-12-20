@@ -1,11 +1,27 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
+ <div>
+  <NavBar/>
   <router-view/>
+ </div>
 </template>
-
+<script lang="ts">
+import { defineComponent } from 'vue';
+import NavBar from './components/NavBar.vue';
+import { useStore } from '@/store';
+import { ActionTypes } from './store/modules/posts/actions';
+import { MutationType } from './store/modules/posts/mutations';
+export default defineComponent({
+  name: 'App',
+  components: {
+    NavBar
+  },
+  created(){
+    const store = useStore()
+    store.dispatch(ActionTypes.GetPosts);
+    store.commit(MutationType.setDisplayedPosts, store.state.posts)
+  }
+});
+</script>
 <style>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
