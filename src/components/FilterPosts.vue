@@ -3,13 +3,13 @@
         <input
         @change="onSearch"
           v-model="searchTerm"
-          class="w-60 outline  outline-2 outline-gray-200 focus:outline-green-500 py-2 px-4 mx-2 rounded-sm"
+          class="w-60 input-primary"
           type="text"
           placeholder="Title"
         />
         <button
           @click="onSearch"
-          class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-3 rounded"
+          class="btn-primary"
         >
           Search
         </button>

@@ -6,27 +6,27 @@
       <div class="flex flex-col flex-grow m-3" v-if="post">
         <input
           v-model="post.title"
-          class="m-2 w-90 outline  outline-2 outline-gray-200 focus:outline-green-500 py-2 px-4 mx-2 rounded-sm"
+          class="m-2 w-90 input-primary"
           type="text"
           placeholder="Title"
         />
         <input
           v-model="post.author"
-          class="m-2 w-90 outline  outline-2 outline-gray-200 focus:outline-green-500 py-2 px-4 mx-2 rounded-sm"
+          class="m-2 w-90 input-primary"
           type="text"
           placeholder="By"
         />
         <textarea
           v-model="post.description"
           rows="4"
-          class="m-2 w-90 outline  outline-2 outline-gray-200 focus:outline-green-500 py-2 px-4 mx-2 rounded-sm"
+          class="m-2 w-90 input-primary"
           type="text"
           placeholder="What's on your mind?"
         />
         <div class="flex-shrink-0">
         <button
           type="submit"
-          class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-3 rounded"
+          class="btn-primary"
         >
           Edit
         </button>

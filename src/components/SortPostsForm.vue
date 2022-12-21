@@ -2,7 +2,7 @@
   <div class=" flex flex-col justify-center items-end my-2">
     <div>
         <label for="select">Sort by:</label>
-    <select id="select" class="w-60 outline  outline-2 outline-gray-200 focus:outline-green-500 py-2 px-4 mx-2 rounded-sm" v-model="selected" @change="onSort()">
+    <select id="select" class="w-60 input-primary py-2 px-4 mx-2 " v-model="selected" @change="onSort()">
         <option v-for="option in options" :value="option" :key="option">
         {{ option }}
         </option>
