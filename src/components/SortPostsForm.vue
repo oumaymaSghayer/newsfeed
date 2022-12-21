@@ -1,15 +1,17 @@
 <template>
-  <div>
-    <label for="select">Sort by:</label>
-    <select id="select" v-model="selected" @change="onSort()">
-    <option v-for="option in options" :value="option" :key="option">
+  <div class=" flex flex-col justify-center items-end my-2">
+    <div>
+        <label for="select">Sort by:</label>
+    <select id="select" class="w-60 outline  outline-2 outline-gray-200 focus:outline-green-500 py-2 px-4 mx-2 rounded-sm" v-model="selected" @change="onSort()">
+        <option v-for="option in options" :value="option" :key="option">
         {{ option }}
-    </option>
-</select>
-<div>
-    <input type="checkbox" id="checkbox" value="1" v-model="sortingOrder" @change="onChangeSortOrder()"/>
+        </option>
+    </select>
+    </div>
+    <div class="m-1 w-64">
+    <input type="checkbox" id="checkbox" value="1" class="mr-2" v-model="sortingOrder" @change="onChangeSortOrder()"/>
     <label for="checkbox">Ascending Order</label>
-</div>
+    </div>
   </div>
 </template>
 

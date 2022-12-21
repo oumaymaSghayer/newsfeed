@@ -1,27 +1,19 @@
 <template>
-  <div>
-    
-    <div class="mx-auto flex items-center bg-white p-2 rounded-md shadow-md">
-      <div class="flex-grow m-1 ml-3">
+    <div class=" flex flex-row justify-center my-2">
         <input
         @change="onSearch"
           v-model="searchTerm"
-          class="w-full focus:outline-none"
+          class="w-60 outline  outline-2 outline-gray-200 focus:outline-green-500 py-2 px-4 mx-2 rounded-sm"
           type="text"
           placeholder="Title"
         />
-      </div>
-      <div class="flex-shrink-0">
         <button
           @click="onSearch"
           class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-3 rounded"
         >
           Search
         </button>
-      </div>
     </div>
-  
-  </div>
 </template>
 
 <script lang="ts">

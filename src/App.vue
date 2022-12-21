@@ -10,6 +10,8 @@ import NavBar from './components/NavBar.vue';
 import { useStore } from '@/store';
 import { ActionTypes } from './store/modules/posts/actions';
 import { MutationType } from './store/modules/posts/mutations';
+import '@/assets/tailwind.css';
+
 export default defineComponent({
   name: 'App',
   components: {
@@ -23,6 +25,7 @@ export default defineComponent({
 });
 </script>
 <style>
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;

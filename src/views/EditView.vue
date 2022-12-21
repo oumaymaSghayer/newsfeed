@@ -1,36 +1,38 @@
 <template>
-    <div>
-        edit view {{ $route.params.id }}
-        <form  id="form" class="my-4" @submit.prevent="updatePost">
+    <div class="flex justify-center">
+        
+        <form  id="form" class="my-4 w-6/12" @submit.prevent="updatePost">
     <div class="mx-auto flex items-center bg-white p-2 rounded-md shadow-md">
-      <div class="flex-grow m-1 ml-3" v-if="post">
+      <div class="flex flex-col flex-grow m-3" v-if="post">
         <input
           v-model="post.title"
-          class="w-full focus:outline-none"
+          class="m-2 w-90 outline  outline-2 outline-gray-200 focus:outline-green-500 py-2 px-4 mx-2 rounded-sm"
           type="text"
           placeholder="Title"
         />
         <input
           v-model="post.author"
-          class="w-full focus:outline-none"
+          class="m-2 w-90 outline  outline-2 outline-gray-200 focus:outline-green-500 py-2 px-4 mx-2 rounded-sm"
           type="text"
           placeholder="By"
         />
-        <input
+        <textarea
           v-model="post.description"
-          class="w-full focus:outline-none"
+          rows="4"
+          class="m-2 w-90 outline  outline-2 outline-gray-200 focus:outline-green-500 py-2 px-4 mx-2 rounded-sm"
           type="text"
           placeholder="What's on your mind?"
         />
-      </div>
-      <div class="flex-shrink-0">
+        <div class="flex-shrink-0">
         <button
           type="submit"
           class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-3 rounded"
         >
-          Add
+          Edit
         </button>
       </div>
+      </div>
+      
     </div>
   </form>
     </div>

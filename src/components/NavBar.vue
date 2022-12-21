@@ -1,5 +1,5 @@
 <template>
-   <nav>
+   <nav class=" shadow-md">
     <router-link to="/">Home</router-link> |
     <router-link to="/about">About</router-link> |
     <router-link to="/new-post">Add post</router-link>
