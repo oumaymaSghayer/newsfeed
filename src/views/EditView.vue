@@ -44,13 +44,13 @@ import { defineComponent } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 
 export default defineComponent({
+  name: "EditView",
   setup() {
      const store = useStore(); 
      const router = useRouter(); 
      const route = useRoute(); 
      const post = store.getters.getPostById(parseInt(route.params.id as string))
      if(!post) {router.push("/"); }
-     console.log(post);
      const updatePost = ()=>{
          if (post) {
           store.commit(MutationType.updatePost, post);

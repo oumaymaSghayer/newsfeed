@@ -15,6 +15,11 @@ npm run serve
 npm run build
 ```
 
+### Run in container
+```
+docker build . -t news && docker run --rm -d -p 8080:8080 news 
+```
+
 ### Lints and fixes files
 ```
 npm run lint

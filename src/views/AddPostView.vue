@@ -51,7 +51,6 @@ import {  useRouter } from 'vue-router'
       const store = useStore()
       const router = useRouter()
       const createPost = () => {
-        console.log("adding new post..")
         const post: IPost = {
           id: Date.now(),
           title: title.value,

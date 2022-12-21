@@ -1,4 +1,4 @@
-import editView from '@/views/EditView.vue'
+import EditView from '@/views/EditView.vue'
 import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 
@@ -21,7 +21,8 @@ const routes: Array<RouteRecordRaw> = [
     name: 'add-post',
     component: () => import(/* webpackChunkName: "about" */ '../views/AddPostView.vue')
   },
-  { path: '/update/:id',name: 'update', component: editView },
+  { path: '/update/:id',name: 'update', component: EditView },
+  { path: '/:pathMatch(.*)*', redirect: '/'  },
 ]
 
 const router = createRouter({
