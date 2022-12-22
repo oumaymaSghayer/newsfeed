@@ -1,5 +1,10 @@
 # newsfeed
 
+## Demo
+
+[This is a demo of the project](https://newsfeedvue.netlify.app/)
+
+
 ## Project setup
 ```
 npm install
